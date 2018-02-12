@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ACDropDownModel'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ACDropDownModel.'
+  s.summary          = 'DropDown Custom using DropDown dependency'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Create a view, this view is a dropdown target, than pus textfield and another view with zero heigth, this view is a anchor and create one array for data.
                        DESC
 
   s.homepage         = 'https://github.com/asfcarvalho/ACDropDownModel'
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/asfcarvalho/ACDropDownModel.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'ACDropDownModel/Classes/**/*'
   
@@ -37,8 +37,7 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-    s.dependency 'AKMaskField'
     s.dependency 'DropDown', '~> 2'
 end

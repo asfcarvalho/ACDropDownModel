@@ -8,15 +8,14 @@
 
 import Foundation
 import DropDown
-import AKMaskField
 
-class DropDownModel: NSObject {
+public class DropDownModel: NSObject {
     
     var anchorView: UIView!
     var dropDownInfo: DropDown?
     var action: SelectionClosure?
     
-    init(onClick: UIView, anchorView: UIView!, dataSource: [String], selectorAction: SelectionClosure?) {
+    public init(onClick: UIView, anchorView: UIView!, dataSource: [String], selectorAction: SelectionClosure?) {
         super.init()
         
         dropDownInfo = DropDown()
@@ -55,15 +54,16 @@ class DropDownModel: NSObject {
 }
 
 extension DropDownModel: UIGestureRecognizerDelegate {
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         return true
     }
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive press: UIPress) -> Bool {
+    @available(iOS 9.0, *)
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive press: UIPress) -> Bool {
         return true
     }
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
     

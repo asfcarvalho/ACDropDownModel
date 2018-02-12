@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import ACDropDownModel
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var viewClick: UIView!
+    @IBOutlet weak var viewAnchor: UIView!
+    @IBOutlet weak var textView: UITextField!
+    
+    let array = ["test1","teste2","teste4"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let _ = DropDownModel(onClick: viewClick, anchorView: viewAnchor, dataSource: array) { (index, item) in
+            self.textView.text = item
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

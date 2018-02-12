@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +21,61 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4O-Z8-xl5">
+                                <rect key="frame" x="31" y="305.5" width="313" height="56"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="car-P7-88E">
+                                        <rect key="frame" x="0.0" y="56" width="313" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="UBn-fx-YbR"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofT-Ew-Vji">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aX1-ZB-Yeg">
+                                        <rect key="frame" x="0.0" y="17" width="313" height="39"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ofT-Ew-Vji" firstAttribute="top" secondItem="W4O-Z8-xl5" secondAttribute="top" id="9Bx-Qk-KNF"/>
+                                    <constraint firstItem="ofT-Ew-Vji" firstAttribute="leading" secondItem="W4O-Z8-xl5" secondAttribute="leading" id="CyX-MH-1eL"/>
+                                    <constraint firstItem="aX1-ZB-Yeg" firstAttribute="leading" secondItem="W4O-Z8-xl5" secondAttribute="leading" id="H5N-WM-Ofw"/>
+                                    <constraint firstAttribute="height" constant="56" id="KIk-sg-MaP"/>
+                                    <constraint firstAttribute="trailing" secondItem="car-P7-88E" secondAttribute="trailing" id="NT0-Lh-SsP"/>
+                                    <constraint firstItem="car-P7-88E" firstAttribute="leading" secondItem="W4O-Z8-xl5" secondAttribute="leading" id="Zdb-gT-PRk"/>
+                                    <constraint firstItem="aX1-ZB-Yeg" firstAttribute="top" secondItem="ofT-Ew-Vji" secondAttribute="bottom" id="eb6-eb-o4j"/>
+                                    <constraint firstAttribute="trailing" secondItem="aX1-ZB-Yeg" secondAttribute="trailing" id="rJD-WA-Ts2"/>
+                                    <constraint firstAttribute="bottom" secondItem="car-P7-88E" secondAttribute="bottom" id="sGw-h6-BS5"/>
+                                    <constraint firstItem="car-P7-88E" firstAttribute="top" secondItem="aX1-ZB-Yeg" secondAttribute="bottom" id="ytQ-Hp-Zgf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W4O-Z8-xl5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="15" id="kfD-sW-XEy"/>
+                            <constraint firstItem="W4O-Z8-xl5" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="m13-fW-S3T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W4O-Z8-xl5" secondAttribute="trailing" constant="15" id="wny-tS-uJU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="aX1-ZB-Yeg" id="Mkb-p5-vBo"/>
+                        <outlet property="viewAnchor" destination="car-P7-88E" id="usv-fI-H0x"/>
+                        <outlet property="viewClick" destination="W4O-Z8-xl5" id="Xzw-rN-7BX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
