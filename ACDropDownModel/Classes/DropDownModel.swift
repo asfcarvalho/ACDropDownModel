@@ -3,7 +3,7 @@
 //  Oncoclinicas
 //
 //  Created by Anderson Carvalho on 08/11/17.
-//  Copyright © 2017 e-Deploy. All rights reserved.
+//  Copyright © 2017 asfcarvalho. All rights reserved.
 //
 
 import Foundation
